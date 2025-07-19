@@ -1,0 +1,21 @@
+{
+    "name": "kthrnpns/final-proj",
+    "description": "ITS122L Final Project - Dashboard for Virlanie Foundation",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Kthrnpns\\FinalProj\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kthrnpns",
+            "email": "kspkatren@gmail.com"
+        },
+        {
+            "name": "unawarespecs",
+            "email": "christiandegala@hotmail.com"
+        }
+    ],
+    "require": {}
+}

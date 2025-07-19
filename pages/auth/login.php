@@ -1,10 +1,10 @@
 <?php
 session_start();
-include('../includes/config.php');
-include('../includes/auth.php');
+include('../../includes/config.php');
+include('../../includes/auth.php');
 
 if (is_logged_in()) {
-    header("Location: ../admin/dashboard.php");
+    header("Location: ../pages/admin/dashboard.php");
     exit();
 }
 
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
     
     if (authenticate_user($email, $password)) {
-        header("Location: ../admin/dashboard.php");
+        header("Location: ../pages/admin/dashboard.php");
         exit();
     } else {
         $error = "Invalid email or password";
