@@ -1,22 +1,26 @@
 <?php
-// config.php - Database configuration
-
 // Start session
-// Replace line 5 (session_start()) with:
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
 // Database configuration
-define('DB_HOST', 'localhost');
+define('DB_HOST', '127.0.0.1');  // Changed from 'localhost' to '127.0.0.1'
 define('DB_NAME', 'virlanie_foundation');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', '');  // Empty password for XAMPP default
 
 // Connect to database
 try {
-    $db = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PASS);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $db = new PDO(
+        "mysql:host=".DB_HOST.";dbname=".DB_NAME, 
+        DB_USER, 
+        DB_PASS,
+        [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+        ]
+    );
 } catch(PDOException $e) {
     die("Database connection failed: " . $e->getMessage());
 }
