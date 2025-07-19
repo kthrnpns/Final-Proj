@@ -11,10 +11,10 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // Database configuration
-define('DB_HOST', '127.0.0.1');  // Changed from 'localhost' to '127.0.0.1'
+define('DB_HOST', 'localhost');
 define('DB_NAME', 'virlanie_foundation');
-define('DB_USER', 'root');
-define('DB_PASS', '');  // Empty password for XAMPP default
+define('DB_USER', 'root'); // or 'virlanie_user' if you created a user
+define('DB_PASS', ''); // or the password you set
 
 // Connect to database
 try {
@@ -32,4 +32,4 @@ try {
 }
 
 // Base URL
-define('BASE_URL', 'http://localhost/virlanie-foundation-system');
+define('BASE_URL', 'http://localhost/virlanie-system');
