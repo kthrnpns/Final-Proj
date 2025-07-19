@@ -1,6 +1,7 @@
 <?php
-include('../includes/config.php');
-include('../includes/auth.php');
+include('../../includes/config.php');
+include('../../includes/auth.php');
+include('../../includes/workshops.php');
 
 // Check if user is logged in and is admin
 if (!is_logged_in() || !is_admin()) {
@@ -23,10 +24,10 @@ $upcoming_workshops = get_upcoming_workshops(5);
     <link href="../assets/css/admin.css" rel="stylesheet">
 </head>
 <body>
-    <?php include('../includes/header.php'); ?>
+    <?php include('../../includes/header.php'); ?>
     
     <div class="admin-container">
-        <?php include('../includes/sidebar.php'); ?>
+        <?php include('../../includes/sidebar.php'); ?>
         
         <main class="admin-content">
             <h1>Admin Dashboard</h1>
@@ -75,7 +76,7 @@ $upcoming_workshops = get_upcoming_workshops(5);
         </main>
     </div>
     
-    <?php include('../includes/footer.php'); ?>
-    <script src="../assets/js/admin.js"></script>
+    <?php include('../../includes/footer.php'); ?>
+    <script src="../../assets/js/admin.js"></script>
 </body>
 </html>

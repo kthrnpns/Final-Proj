@@ -1,6 +1,6 @@
 <?php
-require_once "includes/config.php";
-require_once "includes/auth.php";
+require_once("includes/config.php");
+require_once("includes/auth.php");
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +15,8 @@ require_once "includes/auth.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-<?php include "pages/components/header.php"?>
+<?php include("pages/components/header.php")?>
 <p>Hello World (heavily Work In Progress)</p>
-<?php include "pages/components/footer.php"?>
+<?php include("pages/components/footer.php")?>
 </body>
 </html>
