@@ -1,6 +1,7 @@
 <?php
 include('../../includes/config.php');
 include('../../includes/auth.php');
+include('../../includes/workshops.php');
 
 if (!is_logged_in() || !is_admin()) {
     header("Location: ../auth/login.php");

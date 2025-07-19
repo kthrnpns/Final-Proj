@@ -56,17 +56,18 @@ function delete_workshop($id) {
 function get_upcoming_workshops($limit = 5) {
     global $db;
     
-    $stmt = $db->prepare("
+    // Ensure $limit is an integer to prevent SQL injection
+    $limit = (int)$limit;
+    $stmt = $db->query("
         SELECT w.*, COUNT(r.id) AS participant_count 
         FROM workshops w
         LEFT JOIN registrations r ON w.id = r.workshop_id
         WHERE w.date >= CURDATE()
         GROUP BY w.id
         ORDER BY w.date ASC
-        LIMIT ?
+        LIMIT $limit
     ");
     
-    $stmt->execute([$limit]);
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 

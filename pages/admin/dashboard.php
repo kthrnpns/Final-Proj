@@ -21,13 +21,13 @@ $upcoming_workshops = get_upcoming_workshops(5);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard | Virlanie Foundation</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="../assets/css/admin.css" rel="stylesheet">
+    <link href="../../assets/css/admin.css" rel="stylesheet">
 </head>
 <body>
-    <?php include('../../includes/header.php'); ?>
+    <?php include('../../pages/components/header.php'); ?>
     
     <div class="admin-container">
-        <?php include('../../includes/sidebar.php'); ?>
+        <?php include('../../pages/components/sidebar.php'); ?>
         
         <main class="admin-content">
             <h1>Admin Dashboard</h1>
@@ -76,7 +76,7 @@ $upcoming_workshops = get_upcoming_workshops(5);
         </main>
     </div>
     
-    <?php include('../../includes/footer.php'); ?>
+    <?php include('../../pages/components/footer.php'); ?>
     <script src="../../assets/js/admin.js"></script>
 </body>
 </html>

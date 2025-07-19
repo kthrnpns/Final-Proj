@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
     
     if (authenticate_user($email, $password)) {
-        header("Location: ../pages/admin/dashboard.php");
+        header("Location: ../admin/dashboard.php");
         exit();
     } else {
         $error = "Invalid email or password";
